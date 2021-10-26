@@ -86,14 +86,51 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/modules/promoLine.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/promoLine.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// функция для смены длины линии в блоке промо в зависимости от ширины экрана
+function promoLine(lineSelector) {
+  var line = document.querySelector(lineSelector);
+
+  function resizeLine() {
+    if (document.body.clientWidth < 1440) {
+      line.style.width = "100%";
+    } else {
+      line.style.width = "1440px";
+    }
+  }
+
+  resizeLine();
+  window.addEventListener("resize", function () {
+    resizeLine();
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (promoLine);
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-window.addEventListener("DOMContentLoaded", function () {});
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_promoLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/promoLine */ "./src/js/modules/promoLine.js");
+
+window.addEventListener("DOMContentLoaded", function () {
+  Object(_modules_promoLine__WEBPACK_IMPORTED_MODULE_0__["default"])(".promo__line"); // функция для смены длины линии в блоке промо в зависимости от ширины экрана
+});
 
 /***/ })
 

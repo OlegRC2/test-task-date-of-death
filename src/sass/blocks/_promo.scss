@@ -1,8 +1,98 @@
 .promo {
+    background: url(../../img/blik2.png) center (center/cover) no-repeat;
     background-color: $background-color;
     position: relative;
     width: 100%;
+    min-height: 942px;
+    margin-top: 0;
     &__blik {
-       width: 100%;
+        position: absolute;
+        width: 1920px;
+        height: 1098px;
+        left: 0px;
+        top: -59px;
+    }
+    &__title {
+        padding-top: 36px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, .6);
+    }
+    &__line {
+        width: 1440px;
+        margin: 0 auto;
+        margin-top: 19px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    &__subtitle {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        margin-top: 12px;
+
+        color: rgba(255, 255, 255, 0.6);
+    }
+    &__img-wrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        margin-top: 42px;
+        &-round {
+            width: 391px;
+            height: 391px;
+            opacity: 0.2;
+        }
+        &-woman {
+            width: 238px;
+            height: 238px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: $text-color;
+        width: 420px;
+        margin: 0 auto;
+        
+        span {
+            text-transform: uppercase;
+        }
+    }
+    &__yes {
+        margin-top: 40px;
+    }
+    &__no {
+        margin-top: 35px;
+    }
+    &__prediction {
+        margin: 0 auto;
+        margin-top: 35px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.6);
     }
 }
