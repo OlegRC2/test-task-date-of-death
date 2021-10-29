@@ -1,0 +1,47 @@
+.runes {
+    min-height: 550px;
+    background-color: $background-color;
+    overflow: hidden;
+    &__wrapper {
+        width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 106px;
+    }
+    &__eye {
+        width: 297px;
+        height: 157px;
+        position: absolute;
+        right: -130px;
+        top: 20px;
+    }
+    &__moon {
+        width: 164px;
+        height: 164px;
+        position: absolute;
+        top: 349px;
+        left: -60px;
+    }
+    &__rune {
+        display: block;
+        margin: 0 auto;
+        width: 57px;
+        height: 17px;
+    }
+    &__text {
+        width: 300px;
+        height: 146px;
+        font-family: 'Bad Script';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: #FFFFFF;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+}
+.rune2 {
+    margin-top: 42px;
+}

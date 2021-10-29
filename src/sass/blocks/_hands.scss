@@ -1,0 +1,35 @@
+.hands {
+    min-height: 653px;
+    background-color: $background-color;
+    padding-top: 146px;
+    &__square {
+        width: 443px;
+        height: 437px;
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        margin: 0 auto;
+        position: relative;
+        padding: 128px 39px 0 39px;
+    }
+    &__img {
+        width: 135px;
+        height: 135px;
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, 110%);
+    }
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: #FFFFFF;
+        span {
+            font-weight: 500;
+            color: $text-color;
+        }
+    }
+}

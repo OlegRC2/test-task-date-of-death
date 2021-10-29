@@ -86,18 +86,22 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/modules/promoLine.js":
-/*!*************************************!*\
-  !*** ./src/js/modules/promoLine.js ***!
-  \*************************************/
+/***/ "./src/js/modules/media.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/media.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// функция для смены длины линии в блоке промо в зависимости от ширины экрана
-function promoLine(lineSelector) {
-  var line = document.querySelector(lineSelector);
+// функция для отображения некоторых элементов на мобильных экранах
+function media(lineSelector, imgSelector, footerSelector) {
+  var line = document.querySelector(lineSelector),
+      // линия в хедере
+  imgHeaven = document.querySelector(imgSelector),
+      // картинка в блоке prediction
+  footer = document.querySelector(footerSelector);
 
   function resizeLine() {
     if (document.body.clientWidth < 1440) {
@@ -107,13 +111,39 @@ function promoLine(lineSelector) {
     }
   }
 
+  function resizeImg() {
+    if (document.body.clientWidth > 1440) {
+      imgHeaven.style.left = "0";
+      imgHeaven.style.transform = "none";
+      imgHeaven.src = "img/heaven.png";
+    } else if (document.body.clientWidth < 501) {
+      imgHeaven.src = "img/heaven_small.png";
+    } else {
+      imgHeaven.src = "img/heaven.png";
+      imgHeaven.style.left = "50%";
+      imgHeaven.style.transform = "translateX(-50%)";
+    }
+  }
+
+  footer.addEventListener("click", function () {
+    var currentHeight = getComputedStyle(footer).height;
+
+    if (currentHeight == "19px") {
+      footer.style.height = "27px";
+      window.scrollBy(0, 8);
+    } else {
+      footer.style.height = "19px";
+    }
+  });
   resizeLine();
+  resizeImg();
   window.addEventListener("resize", function () {
     resizeLine();
+    resizeImg();
   });
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (promoLine);
+/* harmony default export */ __webpack_exports__["default"] = (media);
 
 /***/ }),
 
@@ -126,10 +156,10 @@ function promoLine(lineSelector) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_promoLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/promoLine */ "./src/js/modules/promoLine.js");
+/* harmony import */ var _modules_media__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/media */ "./src/js/modules/media.js");
 
 window.addEventListener("DOMContentLoaded", function () {
-  Object(_modules_promoLine__WEBPACK_IMPORTED_MODULE_0__["default"])(".promo__line"); // функция для смены длины линии в блоке промо в зависимости от ширины экрана
+  Object(_modules_media__WEBPACK_IMPORTED_MODULE_0__["default"])(".promo__line", ".prediction__img", ".footer__text"); // функция для отображения некоторых элементов на мобильных экранах
 });
 
 /***/ })

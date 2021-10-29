@@ -1,0 +1,31 @@
+.prediction {
+    min-height: 739px;
+    background-color: $background-color;
+    position: relative;
+    overflow: hidden;
+    &__img {
+        position: relative;
+        width: 1440px;
+        height: 606px;
+        display: block;
+        margin: 0 auto;
+    }
+    &__text {
+        position: absolute;
+        top: 240px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 380px;
+        height: 259px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: #FFFFFF;
+        span {
+            color: $text-color;
+        }
+    }
+}

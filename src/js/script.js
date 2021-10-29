@@ -1,5 +1,5 @@
-import promoLine from "./modules/promoLine";
+import media from "./modules/media";
 
 window.addEventListener("DOMContentLoaded", () => {
-    promoLine(".promo__line"); // функция для смены длины линии в блоке промо в зависимости от ширины экрана
+    media(".promo__line", ".prediction__img", ".footer__text"); // функция для отображения некоторых элементов на мобильных экранах
 });
