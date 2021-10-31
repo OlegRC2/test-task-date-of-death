@@ -1,6 +1,9 @@
 .question {
     min-height: 302px;
     background-color: $background-color;
+    &__wrapper {
+        opacity: 0;
+    }
     &__title {
         font-family: 'Roboto';
         font-style: normal;

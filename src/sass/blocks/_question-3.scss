@@ -1,0 +1,86 @@
+.question-3 {
+    background-color: $background-color;
+    min-height: 1024px;
+    padding-top: 48px;
+    overflow: hidden;
+    display: none;
+    &__deskr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.select {
+    width: 318px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(90deg, rgba(228, 228, 228, 0.9) -6.2%, rgba(203, 203, 203, 0.9) 100%);
+    border-radius: 50px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &__header {
+        height: 70px;
+        display: flex;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    &__current {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: 50%;
+        transform: translate(-50%);
+        color: #202024;
+    }
+    &__user-img {
+        border-radius: 50%;
+        margin-right: 7px;
+    }
+    &__icon {
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-shrink: 0;
+        border: 10px solid transparent; 
+        border-top: 7px solid #202024;
+        top: 30px;
+        right: 25px;
+    }
+    &__body {
+        position: absolute;
+        left: 31px;
+        right: 31px;
+        top: 100%;
+        border: 1px solid rgba(0, 66, 105, 0.28);
+        border-top: 0;
+        display: none;
+        background: linear-gradient(90deg, rgba(228, 228, 228, 1) -6.2%, rgba(203, 203, 203, 1) 100%);
+        overflow: auto;
+        height: 120px;
+        z-index: 100;
+    }
+    &__item {
+        cursor: pointer;
+	    font-size: 16px;
+	    line-height: 24px;
+	    padding: 8px;
+        text-align: center;
+        &:hover {
+            background-color: #f2f2f2;
+        }
+    }
+}
+.select-active {
+    display: block;
+}
+.select-no-number {
+    border: 2px solid #EE5353;
+}

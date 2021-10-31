@@ -1,0 +1,41 @@
+.question-5 {
+    background-color: $background-color;
+    min-height: 1024px;
+    padding-top: 48px;
+    overflow: hidden;
+    display: none;
+    &__deskr-wrapper {
+        position: relative;
+        width: 415px;
+        height: 139px;
+        margin: 0 auto;
+    }
+    &__deskr {
+        background: #FFFFFF;
+        border-radius: 5px;
+        color: #202024;
+        opacity: 1;
+        animation: fadeIn 2s ease-in-out;
+    }
+    &__triangle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 13px solid transparent; 
+        border-top: 25px solid #FFFFFF;
+        right: 28px;
+        animation: fadeIn 2s ease-in-out;
+    }
+    &__title {
+        height: 150px;
+    }
+    &__btn-wrapper {
+        margin-top: 50px;
+        height: 170px;
+    }
+    &__btn-text {
+        width: 280px;
+        font-size: 22px;
+        line-height: 16px;
+    }
+}

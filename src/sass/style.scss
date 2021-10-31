@@ -4,7 +4,7 @@
 @import 'base/animations';
 @import 'base/button';
 
-
+// главная страница
 @import 'blocks/promo';
 @import 'blocks/hands';
 @import 'blocks/prediction';
@@ -12,5 +12,39 @@
 @import 'blocks/runes';
 @import 'blocks/footer';
 
+// блоки с вопросами и остальные
+@import 'blocks/question-2';
+@import 'blocks/question-3';
+@import 'blocks/spinner';
+@import 'blocks/question-4';
+@import 'blocks/question-5';
+@import 'blocks/recording';
+@import 'blocks/call';
 
 @import 'base/media';
+
+// .main-page {
+//     display: none;
+// }
+// .call {
+//     display: block;
+// }
+
+.getInfo {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFF;
+    span {
+        font-size: 25px;
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+}

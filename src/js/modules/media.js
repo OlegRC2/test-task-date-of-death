@@ -1,8 +1,14 @@
 // функция для отображения некоторых элементов на мобильных экранах
-function media(lineSelector, imgSelector, footerSelector) {
+function media(
+    lineSelector,
+    imgSelector,
+    footerSelectorMainPage,
+    footerSelectorEnd
+) {
     const line = document.querySelector(lineSelector), // линия в хедере
         imgHeaven = document.querySelector(imgSelector), // картинка в блоке prediction
-        footer = document.querySelector(footerSelector); // блок с текстом в футере
+        footerMain = document.querySelector(footerSelectorMainPage), // блок с текстом в футере на главной странице
+        footerEnd = document.querySelector(footerSelectorEnd); // блок с текстом в футере на последнем экране
 
     function resizeLine() {
         if (document.body.clientWidth < 1440) {
@@ -26,15 +32,14 @@ function media(lineSelector, imgSelector, footerSelector) {
         }
     }
 
-    footer.addEventListener("click", () => {
-        const currentHeight = getComputedStyle(footer).height;
+    footerMain.addEventListener("click", () => {
+        footerMain.classList.toggle("footer__active");
+        window.scrollBy(0, 19);
+    });
 
-        if (currentHeight == "19px") {
-            footer.style.height = "27px";
-            window.scrollBy(0, 8);
-        } else {
-            footer.style.height = "19px";
-        }
+    footerEnd.addEventListener("click", () => {
+        footerEnd.classList.toggle("call__active-footer");
+        window.scrollBy(0, 19);
     });
 
     resizeLine();

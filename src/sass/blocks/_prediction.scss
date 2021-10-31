@@ -3,6 +3,9 @@
     background-color: $background-color;
     position: relative;
     overflow: hidden;
+    &__wrapper {
+        opacity: 0;
+    }
     &__img {
         position: relative;
         width: 1440px;

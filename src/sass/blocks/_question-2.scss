@@ -1,0 +1,82 @@
+.question-2 {
+    background-color: $background-color;
+    min-height: 1024px;
+    padding-top: 48px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+    &__img-wrapper {
+        width: 499px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__eye {
+        position: absolute;
+        width: 182px;
+        height: 95px;
+        top: 83px;
+        right: -79px;
+    }
+    &__moon {
+        position: absolute;
+        width: 91px;
+        height: 91px;
+        top: 800px;
+        left: -79px;
+    }
+    &__deskr {
+        width: 415px;
+        height: 139px;
+        font-family: 'Bad Script';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.6;
+        margin: 0 auto;
+    }
+    &__line {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 37px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    &__title {
+        width: 498px;
+        height: 88px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #F6C866;
+        margin: 0 auto;
+        margin-top: 74px;
+    }
+    &__btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 385px;
+        justify-content: space-between;
+        margin-top: 22px;
+    }
+    &__count {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.6);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 976px;
+    }
+}
